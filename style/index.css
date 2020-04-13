@@ -50,7 +50,17 @@ table {
 * {
     box-sizing: border-box;
 }
-
+nav{
+    display:flex;
+    justify-content: space-around;
+}
+nav a{
+    color:black;
+    margin: 10px;
+}
+.mainimage {
+    padding: 20px;
+}
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
@@ -76,7 +86,6 @@ p {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 20px;
-    border-bottom: 1px dashed black;
 }
 
 .top-content .text-container {
@@ -93,6 +102,8 @@ p {
 .middle-content h2 {
     padding: 0 2%;
     margin-bottom: 0;
+    border-top: 1px dashed black;
+    padding: 20px;
 }
 
 .middle-content .boxes {
@@ -104,12 +115,41 @@ p {
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.teal{
+    background:teal;
+}
+.gold{
+    background:gold;
+}
+.cadetblue{
+    background:cadetblue;
+}
+.coral{
+    background:coral;
+}
+.crimson{
+    background:crimson;
+}
+.forestgreen{
+    background:forestgreen;
+}
+.darkorchid{
+    background:darkorchid;
+}
+.hotpink{
+    background:hotpink;
+}
+.indigo{
+    background:indigo;
+}
+.dodgerblue{
+    background:dodgerblue;
 }
 
 .bottom-content {
@@ -143,4 +183,50 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+@media(max-width: 800px){
+    .mainimage {
+        width: 75%;
+    }
+    .top-content {
+        flex-direction:column;
+        text-align: center;
+    }
+    .middle-content .boxes{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    .bottom-content {
+        display:flex;
+        flex-direction:column;
+        align-content:center;
+    }
+}
+
+
+@media(max-width: 500px){
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+    footer {
+        display:none;
+    }
+    .mainimage {
+        width: 50%;
+    }
+    .top-content {
+        flex-direction:column;
+        text-align:center;
+    }
+    .middle-content .boxes{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    .bottom-content{
+        display:none;
+    }
 }
